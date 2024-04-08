@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +8,75 @@
 </head>
 <body>
     <header>
-        <h1>Welkom bij Swivel!</h1>
+        <div class="header-content">
+            <img src="assets/icon.png" alt="Swivel Logo" id="logo">
+            <h1>swivel</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="privacy.html">Privacy Statement</a></li>
-                <li><a href="guidelines.html">Guidelines</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="guidelines.html">Richtlijnen</a></li>
+                <li><a href="gebruiksvoorwaarden.html">Voorwaarden</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2></h2>
-        <!-- Main content goes here -->
+        <div class="app-screenshots">
+            <h2></h2>
+            <!-- First row with text on the left -->
+            <div class="features-row">
+                <div class="text-content left">
+                    <h3>Voor werknemers</h3>
+                    <p>Ontdek hoe makkelijk het is om de volgende stap in jouw carrière te zetten. Swipe rechts op werk dat jij leuk vindt. Werkgevers doen hetzelfde met jouw CV, zo ga je dus alleen de sollicitatie aan als er al wederzijdse interesse is!</p>
+                </div>
+                <div class="screenshot-row">
+                    <figure>
+                        <img src="assets/screenshot1.png" alt="Feature 1">
+                    </figure>
+                    <figure>
+                        <img src="assets/screenshot2.png" alt="Feature 2">
+                    </figure>
+                </div>
+            </div>
+            <!-- Second row with text on the right -->
+            <div class="features-row">
+                <div class="screenshot-row">
+                    <figure>
+                        <img src="assets/screenshot3.png" alt="Feature 3">
+                    </figure>
+                    <figure>
+                        <img src="assets/screenshot4.png" alt="Feature 4">
+                    </figure>
+                </div>
+                <div class="text-content right">
+                    <h3>Voor werkgevers</h3>
+                    <p>Op zoek naar nieuw personeel? Swivel biedt de oplossing die past bij een nieuwe generatie arbeidskrachten. Zet je vacatures online, begin CVs te swipen en ga het gesprek aan met mensen die aan jouw bedrijf kunnen bijdragen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <p class="cta-message">De beta van Swivel is nu te downloaden in de App Store.</p>
+
+            <div class="qr-code-container">
+                <img src="assets/QRcode.png" alt="Download Our App QR Code">
+            </div>
+            
+            <a href="https://apps.apple.com/nl/app/swivel/id6478060915" target="_blank" class="app-store-badge">
+                <img src="assets/app-store-badge.png" alt="Download on the App Store">
+            </a>
+    
+        </div>
+        
+        
+        
+
     </main>
     <footer>
         <p>&copy; 2024 Swivel</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>

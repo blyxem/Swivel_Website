@@ -4,15 +4,43 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    height: 80px; /* Adjust as necessary */
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    #logo {
+        height: 40px; /* Smaller logo for mobile */
+    }
+    nav ul li {
+        display: block; /* Stack nav items vertically on smaller screens */
+        margin: 5px 0;
+    }
+}
+
+h1 {
+    margin: 0; /* Removes default margin */
+    font-size: 24px; /* Adjust as necessary */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    margin: 0;
 }
 
 nav ul li {
@@ -21,7 +49,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
 
@@ -30,6 +58,15 @@ footer {
     padding: 1rem 0;
     background: #333;
     color: #fff;
+}
+
+/*This indicates the style of the active page in the navigation header */
+.active {
+    color: #fff;
+    font-weight: bold;
+    background-color: #000; 
+    border-radius: 5cm;
+    padding: 0.2cm;
 }
 
 /* Contact Form Styling */
@@ -78,7 +115,7 @@ footer {
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #5cb85c;
+    background-color: #000;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -87,6 +124,12 @@ footer {
 
 .form-field button[type="submit"]:hover {
     background-color: #4cae4c;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        margin: 0 20px 20px; /* Adjusts spacing for smaller screens */
+    }
 }
 
 /* FAQ Page Styling */
@@ -105,5 +148,111 @@ footer {
 
 .faq-section p {
     margin-bottom: 0;
+}
+
+.download-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Use the full height of the viewport */
+    background-image: linear-gradient(to bottom, #c8ddff, #f5f5f5);
+}
+
+.qr-code-container img {
+    max-width: 150px; /* Adjust size as needed */
+    margin-top: 100px;
+    margin-bottom: 2px; /* Space between the QR code and the download button */
+    border: 15px solid #fff;
+    border-radius: 15px;
+}
+
+.app-store-badge img {
+    max-width: 200px; /* Keep the download button responsive */
+}
+
+.cta-message {
+    font-size: 1.2em; /* Larger text for the call to action */
+    color: #333; /* Dark text for readability */
+}
+
+.signup-link {
+    color: #007BFF; /* Bright link color for visibility */
+    font-weight: bold;
+    text-decoration: none; /* Removes underline */
+}
+
+.signup-link:hover {
+    text-decoration: underline; /* Adds underline on hover for interactivity */
+}
+
+.app-screenshots {
+    text-align: center;
+    padding: 20px;
+    background-image: linear-gradient(to bottom, #c8eef9, #c8ddff);
+}
+
+.screenshot-container figure, .screenshot-row figure {
+    margin: 0;
+    width: 200px; /* Adjust based on the actual size of your screenshots */
+    border: 8px solid black; /* Mimics the iPhone's bezels */
+    border-radius: 24px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    background-color: white; /* iPhone-like background color */
+    padding: 5px; /* Space between the "bezel" and the screenshot */
+}
+
+.screenshot-container img, .screenshot-row img {
+    width: 100%; /* Ensure the image fills the figure */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    border-radius: 12px; /* Slightly rounded corners for the image itself, if desired */
+}
+
+/* New row organization */
+.screenshot-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between screenshots */
+    margin-bottom: 20px; /* Optional: adds space between the rows */
+}
+
+.features-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.text-content {
+    flex: 1; /* Adjust the width of the text content as needed */
+    text-align: center;
+}
+
+.screenshot-row {
+    display: flex;
+    gap: 20px; /* Space between screenshots */
+    flex: 1; /* Adjust based on the size of your screenshots */
+    justify-content: center;
+}
+
+.align-right {
+    flex-direction: row-reverse; /* Flips the order for the second row */
+}
+
+/* Optional: Style adjustments for smaller screens */
+@media (max-width: 768px) {
+    .features-row {
+        flex-direction: column;
+    }
+
+    .text-content, .screenshot-row {
+        flex-basis: auto; /* Let it naturally adjust to content size */
+    }
+
+    .features-row .text-content.left, .features-row .text-content.right {
+        order: -1; /* Ensure text is above images on smaller screens */
+    }
 }
 
